@@ -1,4 +1,5 @@
 import RPi.GPIO as GPIO
+import sys
 from mfrc522 import SimpleMFRC522
 
 
@@ -17,6 +18,6 @@ def read_rfid():
 if __name__ == "__main__":
     id = read_rfid()
     if id is not None:
-        print(type(id))
+        print(id)
     else:
         print("None")
